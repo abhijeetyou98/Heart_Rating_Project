@@ -1,0 +1,15 @@
+/* CSS code for heart rating system */
+.heart {
+    font-size: 15px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .heart.selected {
+    color: red;
+  }
+  .heart:hover{
+    color: pink;
+  }
+
+  

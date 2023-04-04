@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HTML code for heart rating system -->
+<div id="heart-rating">
+    <span class="heart" data-rating="1">&#x2665;</span>
+    <span class="heart" data-rating="2">&#x2665;</span>
+    <span class="heart" data-rating="3">&#x2665;</span>
+    <span class="heart" data-rating="4">&#x2665;</span>
+    <span class="heart" data-rating="5">&#x2665;</span>
+  </div>
+  
+    
+    <script>
+        // JavaScript code for heart rating system
+const hearts = document.querySelectorAll('#heart-rating .heart');
+
+hearts.forEach(heart => {
+  heart.addEventListener('click', function() {
+    const rating = this.getAttribute('data-rating');
+    hearts.forEach(heart => {
+      if (heart.getAttribute('data-rating') <= rating) {
+        heart.classList.add('selected');
+      } else {
+        heart.classList.remove('selected');
+      }
+    });
+  });
+});
+
+    </script>
+</body>
+</html>
